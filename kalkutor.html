@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sederhana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="kalkulator">
+        <div class="input-container">
+            <input type="text" id="angka1" placeholder="Angka 1">
+            <input type="text" id="angka2" placeholder="Angka 2">
+        </div>
+        <div class="tombol-container">
+            <button onclick="Tambah()">+</button>
+            <button onclick="kurang()">-</button>
+        </div>
+        <div class="tombol-container">
+            <button onclick="bagi()">/</button>
+            <button onclick="kali()">x</button>
+        </div>
+        <hr>
+        <div id="hasil">Hasil: </div>
+    </div>
+    <script>
+         function Tambah(){
+            var angka1 = document.getElementById('angka1').value;
+            var angka2 = document.getElementById('angka2').value;
+
+            var hasil = parseInt(angka1) + parseInt(angka2);
+
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+        function kurang(){
+            var angka1 = document.getElementById('angka1').value;
+            var angka2 = document.getElementById('angka2').value;
+
+            var hasil = parseInt(angka1) - parseInt(angka2);
+
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+        function bagi(){
+            var angka1 = document.getElementById('angka1').value;
+            var angka2 = document.getElementById('angka2').value;
+
+            var hasil = parseInt(angka1) / parseInt(angka2);
+
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+        function kali(){
+            var angka1 = document.getElementById('angka1').value;
+            var angka2 = document.getElementById('angka2').value;
+
+            var hasil = parseInt(angka1) * parseInt(angka2);
+
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
